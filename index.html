@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: { transitionTimingFunction: {
+        'in-expo': 'cubic-bezier(0.95, 0.05, 0.795, 0.035)',
+        'out-expo': 'cubic-bezier(0.19, 1, 0.22, 1)',
+      },
+            colors: {
+              clifford: "#da373d",
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body>
+    <nav class="bg-red-500 m-8">
+      <ul class="flex">
+        <li class="list-none p-4 flex-grow">
+          <a
+            href="index.html"
+            class="hover:bg-red-500 hover:underline hover:decoration-4 font-medium"
+            >Home</a
+          >
+        </li>
+        <li class="list-none p-4 flex-grow">
+          <a
+            href="#cctv"
+            class="hover:bg-red-500 hover:underline hover:decoration-4 font-medium"
+            >CCTV</a
+          >
+        </li>
+        <li class="list-none p-4 flex-grow">
+          <a
+            href="#rooms"
+            class="hover:bg-red-500 hover:underline hover:decoration-4 font-medium"
+            >Rooms</a
+          >
+        </li>
+        <li class="list-none p-4 flex-grow">
+          <a
+            href="#contact"
+            class="hover:bg-red-500 hover:underline hover:decoration-4 font-medium"
+            >Contact</a
+          >
+        </li>
+        <li class="list-none p-4 flex-grow">
+          <a
+            href="#"
+            class="hover:bg-red-500 hover:underline hover:decoration-4 font-medium"
+            >Turn On/Turn Off</a
+          >
+        </li>
+      </ul>
+    </nav>
+
+    <h1 class="text-3xl text-center font-bold underline">CCTV FOOTAGE</h1>
+    <div class="flex flex-wrap" id="cctv">
+      <div
+        class="border-2 border-red-500 w-screen h-screen p-8 m-8 bg-red-500 to-fuchsia-500"
+      >
+        <iframe
+          class="w-full h-full"
+          src="https://www.youtube.com/embed/tgbNymZ7vqY"
+        ></iframe>
+      </div>
+    </div>
+    <div>
+      <div class="flex flex-row flex-wrap" id="rooms">
+        <div class="w-64 bg-red-500 p-8 m-10">
+          <h2 class="text-center text-black-400 hover:text-green-400">
+            Bed Room
+          </h2>
+          <div class="hover:transition-all">
+            <img
+              class="hover:rounded-[20px] origin-left hover:rotate-12 transition ease-in-out delay-150 bg-blue-500 hover:-translate-y-1 hover:scale-110 hover:bg-indigo-500 duration-300"
+              src="https://images.pexels.com/photos/262048/pexels-photo-262048.jpeg?auto=compress&cs=tinysrgb&w=600"
+              alt="img"
+            />
+            <button class="m-2 border-2 p-2 rounded-lg bg-green-500 transition duration-150 ease-out md:ease-in">
+                Turn On
+              </button>
+              <button class="m-2 border-2 p-2 rounded-lg bg-green-500 transition duration-150 ease-out md:ease-in">Turn Off</button>
+          </div>
+        </div>
+        <div class="w-64 bg-red-500 p-8 m-10">
+          <h2 class="text-center text-black-400 hover:text-green-400">
+            Front Door
+          </h2>
+          <div class="hover:transition-all">
+            <img
+              class="hover:rounded-[20px] origin-left hover:rotate-12 transition ease-in-out delay-150 bg-blue-500 hover:-translate-y-1 hover:scale-110 hover:bg-indigo-500 duration-300"
+              src="https://images.pexels.com/photos/277559/pexels-photo-277559.jpeg?auto=compress&cs=tinysrgb&w=600"
+              alt="img"
+            />
+            <button class="m-2 border-2 p-2 rounded-lg bg-green-500 transition duration-150 ease-out md:ease-in">
+                Turn On
+              </button>
+              <button class="m-2 border-2 p-2 rounded-lg bg-green-500 transition duration-150 ease-out md:ease-in">Turn Off</button>
+          </div>
+        </div>
+        <div class="w-64 bg-red-500 p-8 m-10">
+          <h2 class="text-center text-black-400 hover:text-green-400">Hall</h2>
+          <div class="hover:transition-all">
+            <img
+              class="hover:rounded-[20px] origin-left hover:rotate-12 transition ease-in-out delay-150 bg-blue-500 hover:-translate-y-1 hover:scale-110 hover:bg-indigo-500 duration-300"
+              src="https://images.pexels.com/photos/2988860/pexels-photo-2988860.jpeg?auto=compress&cs=tinysrgb&w=600"
+              alt="img"
+            />
+            <button class="m-2 border-2 p-2 rounded-lg bg-green-500 transition duration-150 ease-out md:ease-in">
+              Turn On
+            </button>
+            <button class="m-2 border-2 p-2 rounded-lg bg-green-500 transition duration-150 ease-out md:ease-in">Turn Off</button>
+          </div>
+        </div>
+        <div class="w-64 bg-red-500 p-8 m-10">
+          <h2 class="text-center text-black-400 hover:text-green-400">
+            Kitchen
+          </h2>
+          <div class="hover:transition-all">
+            <img
+              class="hover:rounded-[20px] origin-left hover:rotate-12 transition ease-in-out delay-150 bg-blue-500 hover:-translate-y-1 hover:scale-110 hover:bg-indigo-500 duration-300"
+              src="https://images.pexels.com/photos/2724748/pexels-photo-2724748.jpeg?auto=compress&cs=tinysrgb&w=600"
+              alt="img"
+            />
+            <button class="m-2 border-2 p-2 rounded-lg bg-green-500 transition duration-150 ease-out md:ease-in">
+                Turn On
+              </button>
+              <button class="m-2 border-2 p-2 rounded-lg bg-green-500 transition duration-150 ease-out md:ease-in">Turn Off</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div>
+      <address class="text-center p-10 m-8 font-medium bg-red-500">
+        Written by
+        <a href="mailto:sanjay17126@gmail.com">Sanjay Kumar</a>.<br />
+        Visit us at:<br />
+        Chandigarh University<br />
+        Gharuan, Mohali<br />
+        India
+      </address>
+    </div>
+  </body>
+</html>
