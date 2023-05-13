@@ -60,17 +60,16 @@
       </ul>
     </nav>
 
-    <h1 class="text-3xl text-center font-bold underline">CCTV FOOTAGE</h1>
-    <div class="flex flex-wrap" id="cctv">
-      <div
-        class="border-2 border-red-500 w-screen h-screen p-8 m-8 bg-red-500 to-fuchsia-500"
-      >
-        <iframe
-          class="w-full h-full"
-          src="https://www.youtube.com/embed/tgbNymZ7vqY"
-        ></iframe>
+    <div class="text-center ">
+      <button class="button open-button font-medium	p-4 rounded-lg bg-sky-500 hover:bg-sky-700">CCTV FOOTAGE</button>
       </div>
-    </div>
+      <dialog class="modal bg-stone-700 rounded-3xl font-bold  w-full	" id="modal">
+        <h2 class="text-center">CCTV FOOTAGE</h2>
+        <div class="container w-full relative overflow-hidden pt-[56.25%]"> 
+        <iframe class=" rounded-lg responsive-iframe absolute inset-x-0 inset-y-0 w-full h-full" src="https://www.youtube.com/embed/tgbNymZ7vqY"></iframe>
+      </div>
+        <button class="  h-8 absolute top-0 right-0 h-16 w-16 close-button">&times;</button>
+      </dialog>
     <div>
       <div class="flex flex-row flex-wrap" id="rooms">
         <div class="w-64 bg-red-500 p-8 m-10">
@@ -147,5 +146,6 @@
         India
       </address>
     </div>
+    <script src="script.js"></script>
   </body>
 </html>
