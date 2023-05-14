@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css">
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
       tailwind.config = {
@@ -61,19 +62,19 @@
     </nav>
 
     <div class="text-center ">
-      <button class="button open-button font-medium	p-4 rounded-lg bg-sky-500 hover:bg-sky-700">CCTV FOOTAGE</button>
-      </div>
-      <dialog class="modal bg-stone-700 rounded-3xl font-bold  w-full	" id="modal">
+      <button class="button open-button	p-4 rounded-lg bg-sky-500 font-bold hover:bg-sky-700">CCTV FOOTAGE</button>
+    </div>
+    <dialog class=" bg-stone-700 rounded-3xl font-bold  w-full	" id="modal">
         <h2 class="text-center">CCTV FOOTAGE</h2>
-        <div class="container w-full relative overflow-hidden pt-[56.25%]"> 
+        <div class="container w-full h-full relative overflow-hidden pt-[56.25%]"> 
         <iframe class=" rounded-lg responsive-iframe absolute inset-x-0 inset-y-0 w-full h-full" src="https://www.youtube.com/embed/tgbNymZ7vqY"></iframe>
       </div>
         <button class="  h-8 absolute top-0 right-0 h-16 w-16 close-button">&times;</button>
-      </dialog>
+    </dialog>
     <div>
       <div class="flex flex-row flex-wrap" id="rooms">
         <div class="w-64 bg-red-500 p-8 m-10">
-          <h2 class="text-center text-black-400 hover:text-green-400">
+          <h2 class="text-center text-black-400 text-xl	font-bold hover:text-green-400">
             Bed Room
           </h2>
           <div class="hover:transition-all">
@@ -82,14 +83,37 @@
               src="https://images.pexels.com/photos/262048/pexels-photo-262048.jpeg?auto=compress&cs=tinysrgb&w=600"
               alt="img"
             />
-            <button class="m-2 p-1 border-2 rounded-lg bg-green-500 transition duration-150 ease-out md:ease-in">
-                Turn On
-              </button>
-              <button class="m-2 p-1 border-2  rounded-lg bg-green-500 transition duration-150 ease-out md:ease-in">Turn Off</button>
+            <button class="button open-button font-medium	p-2 m-2 rounded-lg bg-sky-500 hover:bg-sky-700" onclick="showDialogBedRoom()">Click Me Bed Room</button>
+            <div id="dialog">
+              <h2>Bed Room</h2>
+              <button onclick="hideDialogBedRoom()">Close</button>
+              <img
+                id="bedRoomBulb"
+                onclick="changeImageBedRoomBulb()"
+                src="pic_bulboff.gif"
+                width="100"
+                height="180"
+              />
+              <button id="bedRoomBulbBtn" onclick="changeImageBedRoomBulb()">click me</button>
+              <p>Turn Off</p>
+        
+              <img
+                id="bedRoomFan"
+                onclick="changeImageBedRoomFan()"
+                src="fan_off.png"
+                width="100"
+                height="180"
+              />
+              <button id="bedRoomFanBtn" onclick="changeImageBedRoomFan()">click me</button>
+        
+              <p>Second bubl turn on/off the light.</p>
+        
+        
+            </div>
           </div>
         </div>
         <div class="w-64 bg-red-500 p-8 m-10">
-          <h2 class="text-center text-black-400 hover:text-green-400">
+          <h2 class="text-center text-black-400  text-xl font-bold	hover:text-green-400">
             Front Door
           </h2>
           <div class="hover:transition-all">
@@ -98,28 +122,75 @@
               src="https://images.pexels.com/photos/277559/pexels-photo-277559.jpeg?auto=compress&cs=tinysrgb&w=600"
               alt="img"
             />
-            <button class="m-2 p-1 border-2  rounded-lg bg-green-500 transition duration-150 ease-out md:ease-in">
-                Turn On
-              </button>
-              <button class="m-2 p-1 border-2  rounded-lg bg-green-500 transition duration-150 ease-out md:ease-in">Turn Off</button>
+            
+              <button class="button open-button font-medium	p-2 m-2 rounded-lg bg-sky-500 hover:bg-sky-700" onclick="showDialogredFrontDoor()">Click Me Front Door</button>
+              <div id="dialog3">
+                <h2>Front Door</h2>
+                <button onclick="hideDialogredFrontDoor()">Close</button>
+                <img
+                  id="frontDoorBulb"
+                  onclick="frontDoorBulb()"
+                  src="pic_bulboff.gif"
+                  width="100"
+                  height="180"
+                />
+                <button id="frontDoorBulbBtn" onclick="frontDoorBulb()">click me</button>
+                <p>Turn Off</p>
+          
+                <img
+                  id="frontDoorFan"
+                  onclick="frontDoorFan()"
+                  src="fan_off.png"
+                  width="100"
+                  height="180"
+                />
+                <button id="frontDoorFanBtn" onclick="frontDoorFan()">click me</button>
+                <p>Second bubl turn on/off the light.</p>
+              </div>
+          
+              
           </div>
         </div>
         <div class="w-64 bg-red-500 p-8 m-10">
-          <h2 class="text-center text-black-400 hover:text-green-400">Hall</h2>
+          <h2 class="text-center text-black-400 text-xl	font-bold hover:text-green-400">Hall</h2>
           <div class="hover:transition-all">
             <img
               class="hover:rounded-[20px] origin-left hover:translate-z-6 transition ease-in-out delay-150 bg-blue-500 hover:-translate-y-1 hover:scale-110 hover:bg-indigo-500 duration-300"
               src="https://images.pexels.com/photos/2988860/pexels-photo-2988860.jpeg?auto=compress&cs=tinysrgb&w=600"
               alt="img"
             />
-            <button class="m-2 p-1 border-2  rounded-lg bg-green-500 transition duration-150 ease-out md:ease-in">
-              Turn On
-            </button>
-            <button class="m-2 p-1 border-2  rounded-lg bg-green-500 transition duration-150 ease-out md:ease-in">Turn Off</button>
+            
+            <button class="button open-button font-medium	p-2 m-2 rounded-lg bg-sky-500 hover:bg-sky-700" onclick="showDialogredHall()">Click Me  Hall Details</button>
+            <div id="dialog2">
+              <h2>Hall</h2>
+              <button onclick="hideDialogredHall()">Close</button>
+              <img
+                id="hallLight"
+                onclick="hallLligtBulb()"
+                src="pic_bulboff.gif"
+                width="100"
+                height="180"
+              />
+              <button id="hallLightBtn" onclick="hallLligtBulb()">click me</button>
+              <p>Turn Off</p>
+        
+              <img
+                id="hallFan"
+                onclick="hallFan()"
+                src="fan_off.png"
+                width="100"
+                height="180"
+              />
+              <button id="hallFanBtn" onclick="hallFan()">click me</button>
+        
+              <p>Second bubl turn on/off the light.</p>
+        
+        
+            </div>
           </div>
         </div>
         <div class="w-64 bg-red-500 p-8 m-10">
-          <h2 class="text-center text-black-400 hover:text-green-400">
+          <h2 class="text-center text-black-400 font-bold text-xl	 hover:text-green-400">
             Kitchen
           </h2>
           <div class="hover:transition-all">
@@ -128,10 +199,32 @@
               src="https://images.pexels.com/photos/2724748/pexels-photo-2724748.jpeg?auto=compress&cs=tinysrgb&w=600"
               alt="img"
             />
-            <button class="m-2 p-1 p-1 border-2  rounded-lg bg-green-500 transition duration-150 ease-out md:ease-in">
-                Turn On
-              </button>
-              <button class="m-2 p-1 border-2  rounded-lg bg-green-500 transition duration-150 ease-out md:ease-in">Turn Off</button>
+           
+            <button class="button open-button font-medium	p-2 m-2 rounded-lg bg-sky-500 hover:bg-sky-700" onclick="showDialogKitchen()">Click Me Kitchen</button>
+            <div id="dialog1">
+              <h2>Kitchen</h2>
+              <button onclick="hideDialogredKitchen()">Close</button>
+              <img
+                id="kitchenBulb"
+                onclick="kichenLight()"
+                src="pic_bulboff.gif"
+                width="100"
+                height="180"
+              />
+              <button id="kitchenLightBtn" onclick="kichenLight()">click me</button>
+              <p>Turn Off</p>
+        
+              <img
+                id="kitchenFan"
+                onclick="kitchenFan()"
+                src="fan_off.png"
+                width="100"
+                height="180"
+              />
+              <button id="kitchenFanBtn" onclick="kitchenFan()">click me</button>
+              <p>Second bubl turn on/off the light.</p>
+            </div>
+        
           </div>
         </div>
       </div>
