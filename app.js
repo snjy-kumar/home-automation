@@ -32,10 +32,10 @@ function changeImageBedRoomBulb() {
   var buttonLight = document.getElementById("bedRoomBulbBtn");
   if (image.src.match("bulbon")) {
     image.src = "pic_bulboff.gif";
-    buttonLight.textContent = "Turn off";
+    buttonLight.textContent = "Turn On";
   } else {
     image.src = "pic_bulbon.gif";
-    buttonLight.textContent = "Turn On";
+    buttonLight.textContent = "Turn Off";
   }
 }
 
