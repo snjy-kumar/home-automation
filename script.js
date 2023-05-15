@@ -1,6 +1,11 @@
 const modal = document.querySelector("#modal");
+const modal1 = document.querySelector("#modal1");
+
 const openButton = document.querySelector(".open-button");
 const closeButton = document.querySelector(".close-button");
+
+const openButton1 = document.querySelector(".open-button1");
+const closeButton1 = document.querySelector(".close-button1");
 
 openButton.addEventListener("click", () => {
   modal.show();
@@ -8,6 +13,13 @@ openButton.addEventListener("click", () => {
 
 closeButton.addEventListener("click", () => {
   modal.close();
+});
+openButton1.addEventListener("click", () => {
+  modal1.show();
+});
+
+closeButton1.addEventListener("click", () => {
+  modal1.close();
 });
 
 const triggers = document.querySelectorAll(".trigger");
@@ -83,10 +95,10 @@ function changeImageBedRoomBulb() {
   var buttonLight = document.getElementById("bedRoomBulbBtn");
   if (image.src.match("bulbon")) {
     image.src = "pic_bulboff.gif";
-    buttonLight.textContent = "Turn off";
+    buttonLight.textContent = "Turn On";
   } else {
     image.src = "pic_bulbon.gif";
-    buttonLight.textContent = "Turn On";
+    buttonLight.textContent = "Turn Off";
   }
 }
 
@@ -110,10 +122,10 @@ function kichenLight() {
   var buttonLight = document.getElementById("kitchenLightBtn");
   if (image.src.match("bulbon")) {
     image.src = "pic_bulboff.gif";
-    buttonLight.textContent = "Turn off";
+    buttonLight.textContent = "Turn On";
   } else {
     image.src = "pic_bulbon.gif";
-    buttonLight.textContent = "Turn On";
+    buttonLight.textContent = "Turn Off";
   }
 }
 
@@ -133,14 +145,14 @@ function kitchenFan() {
 //Hall Details
 
 
-function hallLligtBulb() {
-  var image = document.getElementById("hallLight");
-  var buttonLight = document.getElementById("hallLightBtn");
-  if (image.src.match("bulbon")) {
-    image.src = "pic_bulboff.gif";
-    buttonLight.textContent = "Turn off";
+function hallTv() {
+  var image = document.getElementById("hallTv");
+  var buttonLight = document.getElementById("hallTvBtn");
+  if (image.src.match("tv_off.jpg")) {
+    image.src = "tv_on.gif";
+    buttonLight.textContent = "Turn Off";
   } else {
-    image.src = "pic_bulbon.gif";
+    image.src = "tv_off.jpg";
     buttonLight.textContent = "Turn On";
   }
 }
@@ -167,10 +179,10 @@ function frontDoorBulb() {
   var buttonLight = document.getElementById("frontDoorBulbBtn");
   if (image.src.match("bulbon")) {
     image.src = "pic_bulboff.gif";
-    buttonLight.textContent = "Turn off";
+    buttonLight.textContent = "Turn On";
   } else {
     image.src = "pic_bulbon.gif";
-    buttonLight.textContent = "Turn On";
+    buttonLight.textContent = "Turn Off";
   }
 }
 
@@ -195,10 +207,10 @@ function kichenLight() {
   var buttonLight = document.getElementById("kitchenLightBtn");
   if (image.src.match("bulbon")) {
     image.src = "pic_bulboff.gif";
-    buttonLight.textContent = "Turn off";
+    buttonLight.textContent = "Turn On";
   } else {
     image.src = "pic_bulbon.gif";
-    buttonLight.textContent = "Turn On";
+    buttonLight.textContent = "Turn Off";
   }
 }
 
